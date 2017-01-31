@@ -1,0 +1,17 @@
+.atividade {
+  /*  mixin */
+  border: 1px solid;
+  width: 470px;
+  margin: 0 auto; }
+
+li#brand {
+  margin-right: 90px; }
+
+/*  placeholder */
+li {
+  display: inline;
+  margin-right: 20px; }
+
+li:hover {
+  background: red;
+  color: #fff; }
