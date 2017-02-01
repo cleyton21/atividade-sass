@@ -10,10 +10,10 @@ const notify 	= require("gulp-notify");
 */
 
 gulp.task("sass", function(){
-	return gulp.src(['./sass/*.sass','./scss/*.scss'])
+	return gulp.src('./source/scss/*.scss')
 				.pipe(sass())
 				.on("error", notify.onError({title:"erro ao compilar", message:"<%= error.message %>"}))
-				.pipe(gulp.dest("./css"))
+				.pipe(gulp.dest("./dist/css"))
 });
 
 /*
