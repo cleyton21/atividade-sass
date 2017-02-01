@@ -16,15 +16,22 @@ gulp.task("sass", function(){
 				.pipe(gulp.dest("./dist/css"))
 });
 
+gulp.task("html", function(){
+	return gulp.src('./*.html')
+				.pipe(htmlmin({collapseWhitespace: true}))
+				.on("error", notify.onError({title:"erro ao compilar", message:"<%= error.message %>"}))
+				.pipe(gulp.dest("./dist"))
+});
+
 /*
 
 	Task responsável por executar de fundo todas a mudanças que houver nos arquivos
 
 */
 
-gulp.task("sass:watch", function(){
-	gulp.watch("./sass/*.sass", ['sass']);
-	gulp.watch("./scss/*.scss", ['sass']);
+gulp.task("watch", function(){
+	gulp.watch("./sass/*.scss", ['sass']);
+	gulp.watch("./*.html", ['html']);
 });
 
 /*
