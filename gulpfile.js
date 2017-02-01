@@ -1,6 +1,7 @@
 const gulp 		= require("gulp");
 const sass 		= require("gulp-sass");
 const notify 	= require("gulp-notify");
+const htmlmin = require("gulp-htmlmin");
 
 /*
 
@@ -38,4 +39,4 @@ gulp.task("watch", function(){
   Task default para iniciar apenas com o comando "gulp" no terminal
 */
 
-gulp.task("default",['sass', 'sass:watch']);
+gulp.task("default",['sass', 'html', 'watch']);
